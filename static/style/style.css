@@ -9,6 +9,36 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+}
+
+section {
+    min-height: 100vh!important;
+    overflow-y: auto!important;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%!important;
+}
+
+.form-size {
+    width: 100%!important;
+    max-width: 500px!important;
+}
+
+.result-container {
+    width: 100%!important;
+    margin-top: 20px!important;
+    background-color: #eeeeee9a;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 nav{
@@ -39,7 +69,7 @@ h2{
 }
 
 p{
-    color: var(--main);
+    color: black;
 }
 
 footer{
