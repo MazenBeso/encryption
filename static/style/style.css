@@ -1,0 +1,83 @@
+:root{
+    --main: #96d1ef;
+    --sec:  #af9b64;
+    --third: #026886;
+}
+
+body{
+    background-image: linear-gradient(rgba(4,9,4, 0.7), rgba(4,9,30,0.7)), url("../photo/orcal.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    background-color: var(--main);
+}
+
+h2{
+    color: var(--sec)!important;
+}
+
+.form-control{
+    background-color: var(--sec)!important;
+    color: white!important;
+}
+
+.label{
+    color: var(--third)!important;
+}
+
+#text{
+    resize: none;
+    height: 100px!important;
+}
+
+.form-size{
+    width: 385px!important;
+    height: 580px!important;
+}
+
+p{
+    color: var(--main);
+}
+
+footer{
+    background-color: var(--main);
+}
+
+.footer{
+    display: flex;
+    gap: 5px;
+}
+
+.beso {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blue {
+    color: #049ada;
+}
+
+.red {
+    color: #e71e07;
+}
+
+.yellow {
+    color: #fcd000;
+}
+
+.green {
+    color: #42b132;
+}
+
+.dot{
+    color: #EEE
+}
+.retro {
+    color: #cab26a;
+    text-decoration: none;
+}

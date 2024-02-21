@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere Cipher</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="static/fontawesome/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="p-2 fixed-top">
+  <h2 class="d-flex justify-content-center">Vigenere Cipher</h2>
+</nav>
+
+<section class="mt-5 vh-100 d-flex align-items-center justify-content-center fixed" data-aos="zoom-out">
+  <div class="container d-flex justify-content-center">
+    <form method="POST" class="form-size d-flex flex-column">
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Enter PlainText" style name="text" id="text" style="height: 100px">{{ text }}</textarea>
+        <label for="text" class="label">PlainText/CipherText</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="key" name="key" placeholder="name@example.com" value="{{ custom_key }}">
+        <label for="key" class="label">KeyWord:</label>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 mt-5">
+        <input type="radio" class="btn-check" name="direction" id="encrypt" autocomplete="off" value="encrypt" checked>
+        <label class="btn  btn-outline-secondary" for="encrypt">Encrypt</label>
+
+        <input type="radio" class="btn-check" name="direction" id="decrypt" autocomplete="off" value="decrypt">
+        <label class="btn  btn-outline-secondary" for="decrypt">Decrypt</label>
+      </div>
+
+      <div class="col-auto d-flex justify-content-center pt-3">
+        <button type="submit" value="Submit" class="btn btn-primary mb-3">Submit</button>
+      </div>
+
+      {% if result %}
+      <div class="d-flex align-items-center flex-column mb-5 mt-5 position-static">
+        <h2>Output:</h2>
+        <p>{{ result }}</p>
+      </div>
+    {% endif %}
+
+    </form>
+  </div>
+</section>
+
+<footer class="d-flex justify-content-center align-items-center text-center fixed-bottom">
+    <div class="footer">
+      <div class="footer beso">
+        <p class="text-secondary">Developed By</p> 
+        <a href="https://www.facebook.com/MazenBeso22/" class="beso"><span><div class="beso"><span class="blue">s</span><span class="yellow">u</span><span class="red">p</span><span class="green">e</span><span class="yellow">r</span><span class="red">B</span><span class="green">e</span><span class="yellow">s</span><span class="green">o</span></span></a> • <a href="https://instagram.com/x_shehab_mohamedd_x?igshid=OGQ5ZDc2ODk2ZA==" class="retro">Retro <i class="fa-solid fa-compact-disc"></i></a>
+      </div>
+    </div>
+</footer>
+
+<script src="static/fontawesome/all.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+  });
+</script>
+</body>
+</html>
